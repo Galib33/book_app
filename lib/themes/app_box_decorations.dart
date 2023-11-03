@@ -13,7 +13,7 @@ class AppBoxDecorations {
             color: Colors.grey.shade300,
             spreadRadius: 0.0,
             blurRadius: 3,
-            offset: const Offset(3.0, 3.0)),
+            offset: const Offset(4.0, 4.0)),
       ],
       color: AppColors.whiteColor);
 

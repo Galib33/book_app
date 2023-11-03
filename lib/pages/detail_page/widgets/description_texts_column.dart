@@ -12,22 +12,24 @@ class DescriptionTextsColumn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    BookHiveService bookHiveService=single.get<BookHiveService>();
-    BookModel book=bookHiveService.bookBox.getAt(index)!;
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-         Text(
-          book.title,
-          style: AppTextStyle.white20W600,
-        ),
-        AppSizedBox.sizedBoxH10,
-         Text(
-           book.subTitle,
-           textAlign: TextAlign.justify,
-           style: AppTextStyle.textGreyW400,
-         ),
-      ],
+    BookHiveService bookHiveService = single.get<BookHiveService>();
+    BookModel book = bookHiveService.bookBox.getAt(index)!;
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            book.title,
+            style: AppTextStyle.white20W600,
+          ),
+          AppSizedBox.sizedBoxH10,
+          Text(
+            book.subTitle,
+            textAlign: TextAlign.justify,
+            style: AppTextStyle.textGreyW400,
+          ),
+        ],
+      ),
     );
   }
 }

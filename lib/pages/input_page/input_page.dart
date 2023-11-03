@@ -26,7 +26,7 @@ class InputPage extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
-            primary: false,
+            primary: true,
             padding: AppPaddings.all15,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -35,7 +35,7 @@ class InputPage extends StatelessWidget {
                 AppSizedBox.sizedBoxH30,
                 InputWidget(
                   labelText: AppTexts.titleFieldHint,
-                  maxLength: 10,
+                  maxLength: 25,
                   controller: bookHiveService.titleController,
                 ),
                 AppSizedBox.sizedBoxH20,
